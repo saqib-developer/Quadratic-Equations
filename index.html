@@ -119,17 +119,17 @@
           <label for="valueofc">Value of c :</label>
           <input type="number" placeholder="Constant" id="valc" />
 
-          <button onclick="getUserInput()">Process</button>
+          <button onclick="solution()">Process</button>
 
           <br>ax<sup>2</sup> + bx + c = 0</p>
 
-          <div id="ln1">
-            <span id="valadis"></span>
+          <div id="lines">
+            <!-- <span id="valadis"></span>
             <span>x<sup>2</sup></span>
             <span id="valbdis"></span>
             <span>x</span>
             <span id="valcdis"></span>
-            <span> = 0</span>
+            <span> = 0</span> -->
           </div>
           <div class="comments">
             <p>Comments</p>
@@ -162,49 +162,71 @@
       }
       return value, valueString;
     }
-    function getUserInput() {
-      document.getElementById("ln1")
-      let stringa = document.getElementById("vala").value
-      let a = Number(stringa);
-      stringa = a.toString();
-      let stringb = document.getElementById("valb").value
-      let b = Number(stringb);
-      if (b < 0) {
-        stringb = b.toString();
-      } else {
-        stringb = "+" + b.toString();
-      }
-      let stringc = document.getElementById("valc").value
-      let c = Number(stringc);
-      if (c < 0) {
-        stringc = c.toString();
-      } else {
-        stringc = "+" + c.toString();
-      }
-      document.getElementById("ln1").style.display = 'block';
-      document.getElementById("valadis").innerHTML = stringa;
-      document.getElementById("valbdis").innerHTML = stringb;
-      document.getElementById("valcdis").innerHTML = stringc;
-    }
-    ////////////////////////////////////////commetns section////////////////////////////////
-    document.addEventListener('keypress', (event) => {
-      if (event.key === 'Enter') {
-        // document.getElementById("percomments").style.display = 'flex';
-        // document.getElementById("comment1").innerHTML = document.getElementById("comment").value;
 
-        let comment = document.createElement("div");
-        comment.setAttribute('class', 'percomment');
-        let profile_pic = document.createElement("img");
-        profile_pic.setAttribute('src', 'img/profile pic.png');
-        const comm_text = document.createElement("span");
-        const comm = document.createTextNode(document.getElementById("comment").value);
-        comment.appendChild(profile_pic);
-        comment.appendChild(comm_text);
-        comm_text.appendChild(comm);
-        document.getElementById("percommentssss").appendChild(comment);
-        document.getElementById("comment").value = '';
+    function display(value) {
+      if (value < 0) {
+        let valueString;
+        if (value < 0) {
+          valueString = value.toString();
+        } else {
+          valueString = "+" + value.toString();
+        }
+        return valueString;
+
       }
-    }, false);
+      document.getElementById("solution").addEventListener('click', event => {
+        solution();
+        console.log("Solution");
+      });
+
+      function solution() {
+        console.log("Solution");
+      }
+
+      function solutionss() {
+        console.log("hello!");
+        let stringa = document.getElementById("vala").value;
+        let stringb = document.getElementById("valb").value;
+        let stringc = document.getElementById("valc").value;
+        let a = Number(stringa);
+        let b = Number(stringb);
+        let c = Number(stringc);
+        stringa = a.toString();
+        stringb = display(b);
+        stringc = display(c);
+
+        let displine = stringa + stringb + stringc;
+        const display = document.createElement("span");
+        display.appendChild(displine);
+        document.getElementById("lines").appendChild(display);
+
+        // document.getElementById("ln1").style.display = 'block';
+        // document.getElementById("valadis").innerHTML = stringa;
+        // document.getElementById("valbdis").innerHTML = stringb;
+        // document.getElementById("valcdis").innerHTML = stringc;
+        // let line = document.createElement("div");
+        // line.setAttribute('class', 'percomment');
+      }
+      ////////////////////////////////////////commetns section////////////////////////////////
+      document.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+          // document.getElementById("percomments").style.display = 'flex';
+          // document.getElementById("comment1").innerHTML = document.getElementById("comment").value;
+
+          let comment = document.createElement("div");
+          comment.setAttribute('class', 'percomment');
+          let profile_pic = document.createElement("img");
+          profile_pic.setAttribute('src', 'img/profile pic.png');
+          const comm_text = document.createElement("span");
+          const comm = document.createTextNode(document.getElementById("comment").value);
+          comment.appendChild(profile_pic);
+          comment.appendChild(comm_text);
+          comm_text.appendChild(comm);
+          document.getElementById("percommentssss").appendChild(comment);
+          document.getElementById("comment").value = '';
+        }
+      }, false);
+    }
   </script>
 </body>
 
