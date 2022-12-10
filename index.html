@@ -123,13 +123,22 @@
 
           <br>ax<sup>2</sup> + bx + c = 0</p>
 
-          <div id="lines">
-            <!-- <span id="valadis"></span>
-            <span>x<sup>2</sup></span>
-            <span id="valbdis"></span>
-            <span>x</span>
-            <span id="valcdis"></span>
-            <span> = 0</span> -->
+          <div id="lines" style="display: none;">
+            <div id="l1">
+              <span>x<sup>2</sup></span>
+              <span>x</span>
+              <span> = 0</span>
+            </div>
+            <div id="l2">
+              <p>Applying Quadratic Formula</p>
+            </div>
+            <div id="l3">
+              <span>x = (</span>
+              <span> ± √(</span>
+              <span>² - 4×</span>
+              <span>×</span>
+              <span>)) / 2×</span>
+            </div>
           </div>
           <div class="comments">
             <p>Comments</p>
@@ -152,81 +161,98 @@
     <p>Copyright &copy; Facebook.com All Rights Reserved</p>
   </footer>
   <script>
-    function userInput(id) {
-      let valueString = document.getElementById(id).value
-      let value = Number(valueString);
+
+
+
+    function solution() {
+      document.getElementById("lines").style.display = "block";
+      let stringa = document.getElementById("vala").value;
+      let stringb = document.getElementById("valb").value;
+      let stringc = document.getElementById("valc").value;
+      let a = Number(stringa);
+      let b = Number(stringb);
+      let c = Number(stringc);
+      stringa = document.createTextNode(a.toString())
+      stringb = document.createTextNode(display(b))
+      stringc = document.createTextNode(display(c))
+
+      const stringvala = document.createElement("span");
+      const stringvalb = document.createElement("span");
+      const stringvalc = document.createElement("span");
+
+      stringvala.appendChild(stringa);
+      stringvalb.appendChild(stringb);
+      stringvalc.appendChild(stringc);
+
+      const l1 = document.getElementById("l1");
+
+      l1.insertBefore(stringvala, l1.children[0]);
+      l1.insertBefore(stringvalb, l1.children[2]);
+      l1.insertBefore(stringvalc, l1.children[4]);
+
+
+      if (a != 0) {
+
+        stringb = document.createTextNode(display(-b));
+        stringvalb.appendChild(stringb);
+        L3.text = "" + (-b) + "" + b + "" + a + "" + c + "" + a;
+
+        if ((-4 * a * c) >= 0) {
+          s1 = "+" + (-4 * a * c);
+        } else {
+          s1 = (-4 * a * c) + "";
+        }
+        L4.gameObject.SetActive(true);
+        L4.text = "x = (" + (-b) + " ± √" + (b * b) + " " + s1 + ") / " + 2 * a;
+        L5.gameObject.SetActive(true);
+        L5.text = "x = (" + (-b) + " ± √" + ((b * b) + (-4 * a * c)) + ") / " + 2 * a;
+        if (((b * b) - (4 * a * c)) >= 0) {
+          // float sqrt1 = Mathf.Sqrt((b * b) - (4 * a * c));
+
+          L6.gameObject.SetActive(true);
+          L6.text = "x = (" + (-b) + " ± " + sqrt1 + ") / " + 2 * a;
+          L7.gameObject.SetActive(true);
+          L7.text = "x = (" + (-b) + " + " + sqrt1 + ") / " + 2 * a + "               " + "x = (" + (-b) + " - " + sqrt1 + ") / " + 2 * a;
+          L8.gameObject.SetActive(true);
+          L8.text = "x = " + ((-b) + sqrt1) + " / " + 2 * a + "                       " + "x = " + ((-b) - sqrt1) + " / " + 2 * a;
+          L9.gameObject.SetActive(true);
+          L9.text = "x = " + (Mathf.Round(((-b + sqrt1) / (2 * a)) * 1000) / 1000) + "                           " + "x = " + (Mathf.Round(((-b - sqrt1) / (2 * a)) * 1000) / 1000);
+        }
+      } else {
+        LinearEquation(a, b, c);
+      }
+
+    }
+    function display(value) {
+      let valueString;
       if (value < 0) {
         valueString = value.toString();
       } else {
         valueString = "+" + value.toString();
       }
-      return value, valueString;
+      return valueString;
     }
+    ////////////////////////////////////////commetns section////////////////////////////////
 
-    function display(value) {
-      if (value < 0) {
-        let valueString;
-        if (value < 0) {
-          valueString = value.toString();
-        } else {
-          valueString = "+" + value.toString();
-        }
-        return valueString;
+    document.addEventListener('keypress', (event) => {
+      if (event.key === 'Enter') {
+        // document.getElementById("percomments").style.display = 'flex';
+        // document.getElementById("comment1").innerHTML = document.getElementById("comment").value;
 
+        let comment = document.createElement("div");
+        comment.setAttribute('class', 'percomment');
+        let profile_pic = document.createElement("img");
+        profile_pic.setAttribute('src', 'img/profile pic.png');
+        const comm_text = document.createElement("span");
+        const comm = document.createTextNode(document.getElementById("comment").value);
+        comment.appendChild(profile_pic);
+        comment.appendChild(comm_text);
+        comm_text.appendChild(comm);
+        document.getElementById("percommentssss").appendChild(comment);
+        document.getElementById("comment").value = '';
       }
-      document.getElementById("solution").addEventListener('click', event => {
-        solution();
-        console.log("Solution");
-      });
+    }, false);
 
-      function solution() {
-        console.log("Solution");
-      }
-
-      function solutionss() {
-        console.log("hello!");
-        let stringa = document.getElementById("vala").value;
-        let stringb = document.getElementById("valb").value;
-        let stringc = document.getElementById("valc").value;
-        let a = Number(stringa);
-        let b = Number(stringb);
-        let c = Number(stringc);
-        stringa = a.toString();
-        stringb = display(b);
-        stringc = display(c);
-
-        let displine = stringa + stringb + stringc;
-        const display = document.createElement("span");
-        display.appendChild(displine);
-        document.getElementById("lines").appendChild(display);
-
-        // document.getElementById("ln1").style.display = 'block';
-        // document.getElementById("valadis").innerHTML = stringa;
-        // document.getElementById("valbdis").innerHTML = stringb;
-        // document.getElementById("valcdis").innerHTML = stringc;
-        // let line = document.createElement("div");
-        // line.setAttribute('class', 'percomment');
-      }
-      ////////////////////////////////////////commetns section////////////////////////////////
-      document.addEventListener('keypress', (event) => {
-        if (event.key === 'Enter') {
-          // document.getElementById("percomments").style.display = 'flex';
-          // document.getElementById("comment1").innerHTML = document.getElementById("comment").value;
-
-          let comment = document.createElement("div");
-          comment.setAttribute('class', 'percomment');
-          let profile_pic = document.createElement("img");
-          profile_pic.setAttribute('src', 'img/profile pic.png');
-          const comm_text = document.createElement("span");
-          const comm = document.createTextNode(document.getElementById("comment").value);
-          comment.appendChild(profile_pic);
-          comment.appendChild(comm_text);
-          comm_text.appendChild(comm);
-          document.getElementById("percommentssss").appendChild(comment);
-          document.getElementById("comment").value = '';
-        }
-      }, false);
-    }
   </script>
 </body>
 
