@@ -166,60 +166,62 @@
 
     function solution() {
       document.getElementById("lines").style.display = "block";
-      let stringa = document.getElementById("vala").value;
-      let stringb = document.getElementById("valb").value;
-      let stringc = document.getElementById("valc").value;
-      let a = Number(stringa);
-      let b = Number(stringb);
-      let c = Number(stringc);
-      stringa = document.createTextNode(a.toString())
-      stringb = document.createTextNode(display(b))
-      stringc = document.createTextNode(display(c))
 
-      const stringvala = document.createElement("span");
-      const stringvalb = document.createElement("span");
-      const stringvalc = document.createElement("span");
-
-      stringvala.appendChild(stringa);
-      stringvalb.appendChild(stringb);
-      stringvalc.appendChild(stringc);
+      const val1 = document.createElement("span");
+      const val2 = document.createElement("span");
+      const val3 = document.createElement("span");
+      const val4 = document.createElement("span");
 
       const l1 = document.getElementById("l1");
+      const l3 = document.getElementById("l3");
 
-      l1.insertBefore(stringvala, l1.children[0]);
-      l1.insertBefore(stringvalb, l1.children[2]);
-      l1.insertBefore(stringvalc, l1.children[4]);
+      let a = Number(document.getElementById("vala").value);
+      let b = Number(document.getElementById("valb").value);
+      let c = Number(document.getElementById("valc").value);
+
+      val1.appendChild(document.createTextNode(a.toString()));
+      val2.appendChild(document.createTextNode(display(b)));
+      val3.appendChild(document.createTextNode(display(c)));
+
+      l1.insertBefore(val1, l1.children[0]);
+      l1.insertBefore(val2, l1.children[2]);
+      l1.insertBefore(val3, l1.children[4]);
 
 
-      if (a != 0) {
+      if (a !== 0) {
+        val4.appendChild(document.createTextNode(display(-b)));
 
-        stringb = document.createTextNode(display(-b));
-        stringvalb.appendChild(stringb);
-        L3.text = "" + (-b) + "" + b + "" + a + "" + c + "" + a;
+        l3.insertBefore(val4, l3.children[1]);
+        l3.insertBefore(val2, l3.children[3]);
+        l3.insertBefore(val1, l3.children[5]);
+        l3.insertBefore(val3, l3.children[7]);
+        l3.insertBefore(val1, l3.children[9]);
 
-        if ((-4 * a * c) >= 0) {
-          s1 = "+" + (-4 * a * c);
-        } else {
-          s1 = (-4 * a * c) + "";
-        }
-        L4.gameObject.SetActive(true);
-        L4.text = "x = (" + (-b) + " ± √" + (b * b) + " " + s1 + ") / " + 2 * a;
-        L5.gameObject.SetActive(true);
-        L5.text = "x = (" + (-b) + " ± √" + ((b * b) + (-4 * a * c)) + ") / " + 2 * a;
-        if (((b * b) - (4 * a * c)) >= 0) {
-          // float sqrt1 = Mathf.Sqrt((b * b) - (4 * a * c));
+        // L3.text = "" + (-b) + "" + b + "" + a + "" + c + "" + a;
 
-          L6.gameObject.SetActive(true);
-          L6.text = "x = (" + (-b) + " ± " + sqrt1 + ") / " + 2 * a;
-          L7.gameObject.SetActive(true);
-          L7.text = "x = (" + (-b) + " + " + sqrt1 + ") / " + 2 * a + "               " + "x = (" + (-b) + " - " + sqrt1 + ") / " + 2 * a;
-          L8.gameObject.SetActive(true);
-          L8.text = "x = " + ((-b) + sqrt1) + " / " + 2 * a + "                       " + "x = " + ((-b) - sqrt1) + " / " + 2 * a;
-          L9.gameObject.SetActive(true);
-          L9.text = "x = " + (Mathf.Round(((-b + sqrt1) / (2 * a)) * 1000) / 1000) + "                           " + "x = " + (Mathf.Round(((-b - sqrt1) / (2 * a)) * 1000) / 1000);
-        }
+        // if ((-4 * a * c) >= 0) {
+        //   s1 = "+" + (-4 * a * c);
+        // } else {
+        //   s1 = (-4 * a * c) + "";
+        // }
+        // L4.gameObject.SetActive(true);
+        // L4.text = "x = (" + (-b) + " ± √" + (b * b) + " " + s1 + ") / " + 2 * a;
+        // L5.gameObject.SetActive(true);
+        // L5.text = "x = (" + (-b) + " ± √" + ((b * b) + (-4 * a * c)) + ") / " + 2 * a;
+        // if (((b * b) - (4 * a * c)) >= 0) {
+        //   // float sqrt1 = Mathf.Sqrt((b * b) - (4 * a * c));
+
+        //   L6.gameObject.SetActive(true);
+        //   L6.text = "x = (" + (-b) + " ± " + sqrt1 + ") / " + 2 * a;
+        //   L7.gameObject.SetActive(true);
+        //   L7.text = "x = (" + (-b) + " + " + sqrt1 + ") / " + 2 * a + "               " + "x = (" + (-b) + " - " + sqrt1 + ") / " + 2 * a;
+        //   L8.gameObject.SetActive(true);
+        //   L8.text = "x = " + ((-b) + sqrt1) + " / " + 2 * a + "                       " + "x = " + ((-b) - sqrt1) + " / " + 2 * a;
+        //   L9.gameObject.SetActive(true);
+        //   L9.text = "x = " + (Mathf.Round(((-b + sqrt1) / (2 * a)) * 1000) / 1000) + "                           " + "x = " + (Mathf.Round(((-b - sqrt1) / (2 * a)) * 1000) / 1000);
+        // }
       } else {
-        LinearEquation(a, b, c);
+        // LinearEquation(a, b, c);
       }
 
     }
