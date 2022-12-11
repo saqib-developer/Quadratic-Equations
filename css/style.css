@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 
 :root {
-    --main-bg-color: #2874f0;
-    --search-bar-color: rgb(46, 7, 165);
+    --main-bg-color: #dbdbdb;
+    --other-color: #e4e4e4;
+    --search-bar-color: rgb(124 124 124);
+    --text-color: rgb(28, 28, 28);
+    --link-color: #5d5d5d;
+    --link-hover-color: #545454e3;
+
 }
 
 @keyframes img-slider {
@@ -26,6 +31,11 @@
     margin: 0;
 }
 
+body {
+    color: var(--text-color);
+    background-image: url('/img/background-img7.jpg');
+}
+
 .container {
     min-height: calc(100vh - 70px - 12vh);
 }
@@ -33,6 +43,13 @@
 header {
     background-color: var(--main-bg-color);
     font-family: 'Comfortaa', cursive;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 44px;
 }
 
 .logo {
@@ -45,10 +62,6 @@ header {
     padding: 1px 11px;
 }
 
-nav {
-    display: flex;
-}
-
 nav ul {
     display: flex;
     align-items: center;
@@ -59,26 +72,21 @@ nav ul li {
     padding: 0px 13px;
 }
 
-.nav-elements {
-    display: flex;
-    padding-left: 44px;
-}
-
 nav ul li a {
-    color: white;
+    color: var(--link-color);
     text-decoration: none;
     display: flex;
     align-items: center;
-    font-size: 25px;
+    font-size: 19px;
 }
 
 nav ul li a:hover {
-    color: rgb(113, 115, 118);
+    color: var(--link-hover-color);
     font-weight: bold;
 }
 
 li a img {
-    width: 35px;
+    width: 27px;
     padding-bottom: 6px;
 }
 
@@ -89,13 +97,13 @@ li a img {
 }
 
 .search input {
-    width: 416px;
-    height: 43px;
+    width: 409px;
+    height: 36px;
     border-radius: 24px 0px 0px 24px;
     border: 2px solid var(--search-bar-color);
     padding-left: 20px;
     border-right-style: none;
-    font-size: large;
+    font-size: 17px;
 }
 
 .search button {
@@ -107,16 +115,17 @@ li a img {
 }
 
 .search button:hover {
-    background-color: rgb(97, 97, 245);
+    background-color: var(--link-hover-color);
     cursor: pointer;
 }
 
 .search button img {
-    width: 40px;
+    width: 28px;
+    margin-bottom: 1px;
 }
 
 .slider {
-    background-color: rgb(236 238 228 / 31%);
+    background-color: rgb(60 60 60 / 10%);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -174,16 +183,16 @@ li a img {
     margin: 23px 12px 10px 24px;
     padding-left: 16px;
     padding-top: 10px;
-    color: white;
+    color: var(--text-color);
     font-family: 'Comfortaa', cursive;
 }
 
 .sidebar {
-    background-color: var(--main-bg-color);
+    background-color: var(--other-color);
     margin-right: 6px;
     margin-left: -30px;
     border-radius: 5px;
-    color: white;
+    color: var(--text-color);
     display: flex;
 }
 
@@ -201,11 +210,14 @@ li a img {
 }
 
 .content {
-    background-color: var(--main-bg-color);
+    background-color: var(--other-color);
     line-height: 23px;
-    padding-left: 7px;
+    margin-left: 13px;
+    padding-left: 8px;
     padding-right: 0px;
     padding-top: 16px;
+    color: var(--text-color);
+    border-radius: 5px;
 }
 
 .content h1 {
@@ -237,11 +249,11 @@ li a img {
     background-color: lightgrey;
     margin: 13px 8px 8px 1px;
     padding: 4px 12px;
-    color: black;
+    color: var(--text-color);
 }
 
 .comments p {
-    color: black;
+    color: var(--text-color);
     font-family: 'Comfortaa', cursive;
     font-weight: 600;
     font-size: larger;
@@ -255,12 +267,12 @@ li a img {
 }
 
 .comments input {
-    margin-left: 9px;
+    margin-left: 45px;
     width: 906px;
     height: 28px;
     border-radius: 10px;
     border: 2px solid rgb(155 155 155);
-    padding-left: 4px;
+    padding-left: 6px;
     font-size: large;
 }
 
@@ -268,6 +280,27 @@ li a img {
     display: flex;
     align-items: center;
     margin: 20px 0px;
+}
+
+.percomment div {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+#name {
+    margin: 0px 0px 6px 4px;
+    padding: 0px 0px 0px 6px;
+    width: 186px;
+    height: 20px;
+    font-size: smaller;
+}
+
+.name {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 600;
+    font-size: larger;
+    color: var(--text-color);
 }
 
 .percomment img {
@@ -279,9 +312,10 @@ li a img {
     font-size: small;
 }
 
+
 footer {
-    height: 12vh;
+    height: 73px;
     background-color: var(--main-bg-color);
-    color: white;
+    color: var(--text-color);
     font-family: 'Comfortaa', cursive;
 }
