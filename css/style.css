@@ -41,15 +41,16 @@ body {
 }
 
 header {
+    /* font-family:  'Comfortaa',cursive; */
     background-color: var(--main-bg-color);
-    font-family: 'Comfortaa', cursive;
+    font-family: cursive;
+    width: 100%;
 }
 
 header nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-left: 44px;
 }
 
 .logo {
@@ -177,23 +178,21 @@ li a img {
 
 .container2 {
     display: flex;
-    justify-content: space-between;
     align-items: stretch;
-
-    margin: 23px 12px 10px 24px;
-    padding-left: 16px;
-    padding-top: 10px;
     color: var(--text-color);
-    font-family: 'Comfortaa', cursive;
+    font-family: cursive;
+    justify-content: space-between;
+    margin: 18px 0px 7px 0px;
 }
 
 .sidebar {
     background-color: var(--other-color);
-    margin-right: 6px;
-    margin-left: -30px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     border-radius: 5px;
     color: var(--text-color);
-    display: flex;
+    min-width: 8.4%;
+    width: 15%;
 }
 
 .sidebar ul {
@@ -203,8 +202,7 @@ li a img {
 }
 
 .sidebar ul button {
-
-    padding: 4px 41px;
+    padding: 4px 0px;
     margin: 4px 8px;
     font-size: medium;
 }
@@ -212,12 +210,11 @@ li a img {
 .content {
     background-color: var(--other-color);
     line-height: 23px;
-    margin-left: 13px;
-    padding-left: 8px;
-    padding-right: 0px;
-    padding-top: 16px;
     color: var(--text-color);
     border-radius: 5px;
+    width: 85%;
+    margin-left: 15px;
+    padding: 10px 10px;
 }
 
 .content h1 {
@@ -254,7 +251,7 @@ li a img {
 
 .comments p {
     color: var(--text-color);
-    font-family: 'Comfortaa', cursive;
+    font-family: cursive;
     font-weight: 600;
     font-size: larger;
 }
@@ -268,7 +265,7 @@ li a img {
 
 .comments input {
     margin-left: 45px;
-    width: 906px;
+    width: 90%;
     height: 28px;
     border-radius: 10px;
     border: 2px solid rgb(155 155 155);
@@ -297,7 +294,7 @@ li a img {
 }
 
 .name {
-    font-family: 'Comfortaa', cursive;
+    font-family: cursive;
     font-weight: 600;
     font-size: larger;
     color: var(--text-color);
@@ -317,5 +314,6 @@ footer {
     height: 73px;
     background-color: var(--main-bg-color);
     color: var(--text-color);
-    font-family: 'Comfortaa', cursive;
+    font-family: cursive;
+    width: 100%;
 }
