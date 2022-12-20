@@ -12,9 +12,6 @@
   <link rel="manifest" href="img\favicon_io\site.webmanifest">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/utils.css">
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
 </head>
 
 <body>
@@ -36,21 +33,11 @@
   <main>
     <div class="container">
       <div class="img-slider-btn">
-        <!-- <button id="next-img" class="img-slider"><img src="img/icons/arrow_back.svg" alt=""></button>
-        <button class="prev-img img-slider"><img src="img/icons/arrow_forward.svg" alt="Why"></button> -->
       </div>
       <div class="slider">
-        <!-- <img src="img/logo9.png" alt=""> -->
         <img class="img0" src="img/logo5.png" alt="">
-        <!-- <img class="img1" src="img/background-img1.jpg" alt="">
-        <img class="img2" src="img/background-img2.jpg" alt="">
-        <img class="img3" src="img/background-img3.jpg" alt="">
-        <img class="img4" src="img/background-img4.jpg" alt="">
-        <img class="img5" src="img/background-img5.jpg" alt="">
-        <img class="img6" src="img/background-img6.jpg" alt=""> -->
       </div>
       <div class="container2">
-
         <div class="sidebar">
           <ul>
             <button>Facebook</button>
@@ -63,22 +50,9 @@
             <button>Photos</button>
             <button>Get into PC</button>
             <hr>
-            <!-- <select name="" id="sidebar-options" multiple size="8">
-              <optgroup label="Quadratic Equations">
-                <option value="defination">Defination</option>
-                <option value="explanation">Explanation</option>
-                <option value="example">Example</option>
-              </optgroup>
-              <optgroup label="Linear Equations">
-                <option value="defination">Defination</option>
-                <option value="explanation">Explanation</option>
-                <option value="example">Example</option>
-              </optgroup>
-            </select> -->
           </ul>
         </div>
         <div class="content">
-
           <h1>Quadratic Equations</h1>
           <p>
             A quadratic equation is a second-order polynomial equation in a single
@@ -143,16 +117,14 @@
             </div>
           </div>
           <hr>
-          <form action="" class="commenting">
-            <div class="comments">
-              <p>Comments</p>
-              <hr>
-              <img src="img/profile pic.png" alt="">
-              <input type="text" name="" id="name" placeholder="Your name...">
-              <input type="text" name="" id="comment" placeholder="Comment here..."><br>
-              <button class="send" type="submit" onclick="postComment()">Send</button>
-            </div>
-          </form>
+          <div class="comments">
+            <p>Comments</p>
+            <hr>
+            <img src="img/profile pic.png" alt="">
+            <input type="text" name="" id="name" placeholder="Your name...">
+            <input type="text" name="" id="comment" placeholder="Comment here..."><br>
+            <button class="send" type="submit" onclick="postComment()">Send</button>
+          </div>
           <div class="comments" id="percommentssss">
             <div class="percomment">
               <img src="img/background-img3(1).jpg" alt="">
@@ -170,9 +142,6 @@
   <footer class="flex-all-center">
     <p>Copyright &copy; MSN.com All Rights Reserved</p>
   </footer>
-
-  <script src="js/firebaseComment.js">
-  </script>
   <script src="js/script.js"></script>
 </body>
 
