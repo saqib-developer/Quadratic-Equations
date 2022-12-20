@@ -121,9 +121,27 @@
             <p>Comments</p>
             <hr>
             <img src="img/profile pic.png" alt="">
-            <input type="text" name="" id="name" placeholder="Your name...">
-            <input type="text" name="" id="comment" placeholder="Comment here..."><br>
-            <button class="send" type="submit" onclick="postComment()">Send</button>
+            <form id="contactForm">
+              <!-- <input type="text" name="" id="name" placeholder="Your name...">
+              <input type="text" name="" id="comment" placeholder="Comment here..."><br>
+              <button class="send" type="submit" onclick="postComment()">Send</button> -->
+
+              <p>
+                <label>Name</label>
+                <input type="text" name="name" id="name" required>
+              </p>
+              <p>
+                <label>Email Address</label>
+                <input type="email" name="email" id="email" required>
+              </p>
+              <p class="full">
+                <label>Comment</label>
+                <textarea name="message" rows="5" id="message"></textarea>
+              </p>
+              <p class="full">
+                <button type="submit">Submit</button>
+              </p>
+            </form>
           </div>
           <div class="comments" id="percommentssss">
             <div class="percomment">
@@ -142,7 +160,9 @@
   <footer class="flex-all-center">
     <p>Copyright &copy; MSN.com All Rights Reserved</p>
   </footer>
+  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/firebaseComment.js"></script>
 </body>
 
 </html>

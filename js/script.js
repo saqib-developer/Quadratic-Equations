@@ -70,37 +70,37 @@ function display(value) {
 }
 ////////////////////////////////////////commetns section////////////////////////////////
 
-document.addEventListener('keypress', (event) => {
-    if (event.key === 'Enter') {
-        if (document.getElementById("name").value.length !== 0 && document.getElementById("comment").value.length !== 0) {
-            let comment = document.createElement("div");
-            comment.setAttribute('class', 'percomment');
+// document.addEventListener('keypress', (event) => {
+//     if (event.key === 'Enter') {
+//         if (document.getElementById("name").value.length !== 0 && document.getElementById("comment").value.length !== 0) {
+//             let comment = document.createElement("div");
+//             comment.setAttribute('class', 'percomment');
 
-            let profile_pic = document.createElement("img");
-            profile_pic.setAttribute('src', 'img/profile pic.png');
+//             let profile_pic = document.createElement("img");
+//             profile_pic.setAttribute('src', 'img/profile pic.png');
 
-            let span_div = document.createElement("div");
+//             let span_div = document.createElement("div");
 
-            const comm_text = document.createElement("span");
-            const comm = document.createTextNode(document.getElementById("comment").value);
+//             const comm_text = document.createElement("span");
+//             const comm = document.createTextNode(document.getElementById("comment").value);
 
-            const name_text = document.createElement("span");
-            name_text.setAttribute('class', 'name');
-            const name = document.createTextNode(document.getElementById("name").value);
-            name_text.appendChild(name);
-            comm_text.appendChild(comm);
+//             const name_text = document.createElement("span");
+//             name_text.setAttribute('class', 'name');
+//             const name = document.createTextNode(document.getElementById("name").value);
+//             name_text.appendChild(name);
+//             comm_text.appendChild(comm);
 
-            span_div.appendChild(name_text);
-            span_div.appendChild(comm_text);
+//             span_div.appendChild(name_text);
+//             span_div.appendChild(comm_text);
 
-            comment.appendChild(profile_pic);
-            comment.appendChild(span_div);
-            document.getElementById("percommentssss").appendChild(comment);
-            document.getElementById("comment").value = '';
-            document.getElementById("name").value = '';
-        } else {
-            alert("Please enter a name and some comment");
-        }
+//             comment.appendChild(profile_pic);
+//             comment.appendChild(span_div);
+//             document.getElementById("percommentssss").appendChild(comment);
+//             document.getElementById("comment").value = '';
+//             document.getElementById("name").value = '';
+//         } else {
+//             alert("Please enter a name and some comment");
+//         }
 
-    }
-}, false);
+//     }
+// }, false);
