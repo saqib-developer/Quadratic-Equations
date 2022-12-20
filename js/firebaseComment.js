@@ -4,7 +4,7 @@ const firebaseConfig = {
     authDomain: "comment-91886.firebaseapp.com",
     databaseURL: "https://comment-91886-default-rtdb.firebaseio.com",
     projectId: "comment-91886",
-    storageBucket: "comment-91886.appspot.com",
+    storageBucket: "gs://comment-91886.appspot.com/",
     messagingSenderId: "1054923371683",
     appId: "1:1054923371683:web:29c92e257672e3d18a3b16",
     measurementId: "G-BNBT4QGFMV"
@@ -83,3 +83,14 @@ leadsRef.on('value', function (snapshot) {
         percomment.appendChild(commentt);
     });
 });
+
+
+
+
+import { getStorage, ref } from "firebase/storage";
+
+// Get a reference to the storage service, which is used to create references in your storage bucket
+const storage = getStorage();
+
+// Create a storage reference from our storage service
+const storageRef = ref(storage);
