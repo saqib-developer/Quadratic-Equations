@@ -12,10 +12,12 @@
   <link rel="manifest" href="img\favicon_io\site.webmanifest">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/utils.css">
+  <script src="js\script.js"></script>
 </head>
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 
 <body>
-  <script src="script.js"></script>
   <header>
     <nav>
       <div class="logo"><a href="index.html"><img src="img/logo4.png" alt="MSN"></a></div>
@@ -141,12 +143,13 @@
             </div>
           </div>
           <hr>
-          <div class="comments">
+          <div class="comments commenting">
             <p>Comments</p>
             <hr>
             <img src="img/profile pic.png" alt="">
             <input type="text" name="" id="name" placeholder="Your name...">
-            <input type="text" name="" id="comment" placeholder="Comment here...">
+            <input type="text" name="" id="comment" placeholder="Comment here..."><br>
+            <button class="send" type="submit" onclick="postComment">Send</button>
           </div>
           <div class="comments" id="percommentssss">
             <div class="percomment">
@@ -165,6 +168,8 @@
   <footer class="flex-all-center">
     <p>Copyright &copy; MSN.com All Rights Reserved</p>
   </footer>
+  <script type="module" src="js/firebaseComment.js">
+  </script>
 </body>
 
 </html>

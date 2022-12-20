@@ -107,6 +107,10 @@ li a img {
     font-size: 17px;
 }
 
+.search input:enabled {
+    border: 2px solid var(--search-bar-color);
+}
+
 .search button {
     background-color: var(--main-bg-color);
     border: 2px solid var(--search-bar-color);
@@ -271,6 +275,10 @@ li a img {
     border: 2px solid rgb(155 155 155);
     padding-left: 6px;
     font-size: large;
+}
+
+.send {
+    margin-left: 20px;
 }
 
 .percomment {
