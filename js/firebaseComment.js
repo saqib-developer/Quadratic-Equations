@@ -12,8 +12,8 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-// Reference messages collection
-var messagesRef = firebase.database().ref('messages');
+// Reference comments collection
+var commentsRef = firebase.database().ref('comments');
 
 // Listen for form submit
 document.getElementById('contactForm').addEventListener('submit', submitForm);
@@ -25,18 +25,18 @@ function submitForm(e) {
     // Get values
     var name = getInputVal('name');
     var email = getInputVal('email');
-    var message = getInputVal('message');
+    var comment = getInputVal('comment');
 
-    // Save message
-    saveMessage(name, email, message);
+    // Save comment
+    saveComment(name, email, comment);
 
     // Show alert
-    // document.querySelector('.alert').style.display = 'block';
+    document.querySelector('.alert').style.display = 'block';
 
-    // // Hide alert after 3 seconds
-    // setTimeout(function () {
-    //     document.querySelector('.alert').style.display = 'none';
-    // }, 3000);
+    // Hide alert after 3 seconds
+    setTimeout(function () {
+        document.querySelector('.alert').style.display = 'none';
+    }, 3000);
 
     // Clear form
     document.getElementById('contactForm').reset();
@@ -47,12 +47,39 @@ function getInputVal(id) {
     return document.getElementById(id).value;
 }
 
-// Save message to firebase
-function saveMessage(name, email, message) {
-    var newMessageRef = messagesRef.push();
-    newMessageRef.set({
+// Save comment to firebase
+function saveComment(name, email, comment) {
+    var newCommentRef = commentsRef.push();
+    newCommentRef.set({
         name: name,
         email: email,
-        message: message
+        comment: comment
     });
 }
+
+var leadsRef = firebase.database().ref('comments');
+leadsRef.on('value', function (snapshot) {
+    snapshot.forEach(function (childSnapshot) {
+        var childData = childSnapshot.val();
+
+        var name = document.createTextNode(childData.name);
+        var email = document.createTextNode('(' + childData.email + ')');
+        var comment = document.createTextNode(childData.comment);
+
+        var percomment = document.getElementById("percomment");
+        var namet = document.createElement("span");
+        var emailt = document.createElement("span");
+        var commentt = document.createElement("span");
+        namet.setAttribute('class', 'name');
+        emailt.setAttribute('class', 'email');
+        commentt.setAttribute('class', 'comment');
+        namet.appendChild(name);
+        emailt.appendChild(email);
+        emailt.appendChild(document.createElement('br'));
+        commentt.appendChild(comment);
+
+        percomment.appendChild(namet);
+        percomment.appendChild(emailt);
+        percomment.appendChild(commentt);
+    });
+});

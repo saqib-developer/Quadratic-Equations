@@ -281,16 +281,10 @@ li a img {
     margin-left: 20px;
 }
 
-.percomment {
+#percomment {
     display: flex;
     align-items: center;
     margin: 20px 0px;
-}
-
-.percomment div {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
 }
 
 #name {
@@ -308,11 +302,11 @@ li a img {
     color: var(--text-color);
 }
 
-.percomment img {
+#percomment img {
     width: 43px;
 }
 
-.percomment span {
+#percomment span {
     margin-left: 16px;
     font-size: small;
 }
@@ -324,4 +318,13 @@ footer {
     color: var(--text-color);
     font-family: cursive;
     width: 100%;
+}
+
+.alert {
+    text-align: center;
+    padding: 10px;
+    background: #79c879;
+    color: #fff;
+    margin-bottom: 10px;
+    display: none;
 }
