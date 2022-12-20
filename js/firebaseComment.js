@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
+// import { initializeApp } from "firebase/app";
+// import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -9,6 +9,7 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase
 const firebaseConfig = {
     apiKey: "AIzaSyB1R1yQBHVidkHHBPZFURN-TXjDqNN-WUo",
     authDomain: "comment-39d8a.firebaseapp.com",
+    databaseURL: "https://comment-39d8a-default-rtdb.asia-southeast1.firebasedatabase.app",
     projectId: "comment-39d8a",
     storageBucket: "comment-39d8a.appspot.com",
     messagingSenderId: "838728999966",
@@ -17,10 +18,9 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
-let database = firebase.database();
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+var database = firebase.database();
 
 function postComment() {
     //getting the values from the website to send to the database

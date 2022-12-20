@@ -12,10 +12,10 @@
   <link rel="manifest" href="img\favicon_io\site.webmanifest">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/utils.css">
-  <script src="js\script.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
 </head>
-<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
-<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 
 <body>
   <header>
@@ -143,14 +143,16 @@
             </div>
           </div>
           <hr>
-          <div class="comments commenting">
-            <p>Comments</p>
-            <hr>
-            <img src="img/profile pic.png" alt="">
-            <input type="text" name="" id="name" placeholder="Your name...">
-            <input type="text" name="" id="comment" placeholder="Comment here..."><br>
-            <button class="send" type="submit" onclick="postComment">Send</button>
-          </div>
+          <form action="" class="commenting">
+            <div class="comments">
+              <p>Comments</p>
+              <hr>
+              <img src="img/profile pic.png" alt="">
+              <input type="text" name="" id="name" placeholder="Your name...">
+              <input type="text" name="" id="comment" placeholder="Comment here..."><br>
+              <button class="send" type="submit" onclick="postComment()">Send</button>
+            </div>
+          </form>
           <div class="comments" id="percommentssss">
             <div class="percomment">
               <img src="img/background-img3(1).jpg" alt="">
@@ -168,8 +170,10 @@
   <footer class="flex-all-center">
     <p>Copyright &copy; MSN.com All Rights Reserved</p>
   </footer>
-  <script type="module" src="js/firebaseComment.js">
+
+  <script src="js/firebaseComment.js">
   </script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
