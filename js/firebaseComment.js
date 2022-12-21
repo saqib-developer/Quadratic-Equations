@@ -70,7 +70,7 @@ leadsRef.on('value', function (snapshot) {
         var percomment = document.getElementById("percomment");
         var namet = document.createElement("span");
         var emailt = document.createElement("span");
-        var commentt = document.createElement("p");
+        var commentt = document.createElement("span");
         namet.setAttribute('id', 'databasename');
         emailt.setAttribute('id', 'databaseemail');
         commentt.setAttribute('id', 'databasecomment');
