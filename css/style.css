@@ -233,12 +233,14 @@ li a img {
     padding-left: 17px;
 }
 
-.content input {
+#vala,
+#valb,
+#valc {
     margin-left: 40px;
     margin-bottom: 10px;
 }
 
-.content label {
+.values {
     margin-bottom: 10px;
 }
 
@@ -253,7 +255,7 @@ li a img {
     color: var(--text-color);
 }
 
-.comments p {
+.comments h5 {
     color: var(--text-color);
     font-family: cursive;
     font-weight: 600;
@@ -267,57 +269,75 @@ li a img {
     margin-top: 3px;
 }
 
-.comments input {
-    margin-left: 45px;
-    width: 90%;
-    height: 28px;
-    border-radius: 10px;
-    border: 2px solid rgb(155 155 155);
-    padding-left: 6px;
-    font-size: large;
+.name {
+    margin-left: 25px;
 }
 
-.send {
-    margin-left: 20px;
+.name label,
+.email label,
+.comment label {
+    font-weight: bold;
+}
+
+.name input,
+.email input {
+    width: 266px;
+    height: 19px;
+    border-radius: 5px;
+    border: 1.5px solid var(--search-bar-color);
+    padding-left: 4px;
+}
+
+.email {
+    margin-left: 56px;
+}
+
+.comment {
+    margin-top: 9px;
+}
+
+.comment input {
+    width: 723px;
+    height: 19px;
+    border-radius: 11px;
+    border: 1.5px solid var(--search-bar-color);
+    padding-left: 4px;
+}
+
+#upload-button {
+    margin-left: 82px;
+    margin-top: 7px;
+    padding: 2px 18px;
+    font-weight: 500;
+    font-size: medium;
 }
 
 #percomment {
-    display: flex;
-    align-items: center;
-    margin: 20px 0px;
-}
-
-#name {
-    margin: 0px 0px 6px 4px;
-    padding: 0px 0px 0px 6px;
-    width: 186px;
-    height: 20px;
-    font-size: smaller;
-}
-
-.name {
-    font-family: cursive;
-    font-weight: 600;
-    font-size: larger;
+    margin: 11px 0px;
+    background-color: lightgrey;
+    padding: 6px 8px;
     color: var(--text-color);
 }
 
-#percomment img {
+/* #percomment img {
     width: 43px;
 }
 
 #percomment span {
     margin-left: 16px;
     font-size: small;
+} */
+
+#databasename{
+    font-weight: 600;
 }
 
+#databaseemail{
+margin-left: 15px;
+}
 
-footer {
-    height: 73px;
-    background-color: var(--main-bg-color);
-    color: var(--text-color);
-    font-family: cursive;
-    width: 100%;
+#databasecomment{
+    display: block;
 }
 
 .alert {
@@ -327,4 +347,12 @@ footer {
     color: #fff;
     margin-bottom: 10px;
     display: none;
+}
+
+footer {
+    height: 73px;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    font-family: cursive;
+    width: 100%;
 }

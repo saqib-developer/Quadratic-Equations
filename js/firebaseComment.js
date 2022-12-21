@@ -1,3 +1,4 @@
+
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyBlm7q53px_bdzDpr5rKriNELtv25gF1sA",
@@ -69,13 +70,12 @@ leadsRef.on('value', function (snapshot) {
         var percomment = document.getElementById("percomment");
         var namet = document.createElement("span");
         var emailt = document.createElement("span");
-        var commentt = document.createElement("span");
-        namet.setAttribute('class', 'name');
-        emailt.setAttribute('class', 'email');
-        commentt.setAttribute('class', 'comment');
+        var commentt = document.createElement("p");
+        namet.setAttribute('id', 'databasename');
+        emailt.setAttribute('id', 'databaseemail');
+        commentt.setAttribute('id', 'databasecomment');
         namet.appendChild(name);
         emailt.appendChild(email);
-        emailt.appendChild(document.createElement('br'));
         commentt.appendChild(comment);
 
         percomment.appendChild(namet);
