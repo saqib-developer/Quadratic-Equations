@@ -107,7 +107,7 @@ li a img {
     font-size: 17px;
 }
 
-.search input:enabled {
+.search input:active {
     border: 2px solid var(--search-bar-color);
 }
 
