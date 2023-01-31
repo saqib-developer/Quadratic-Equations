@@ -9,7 +9,7 @@
     --link-hover-color: #545454e3; */
 
     --main-bg-color: #0087ff;
-    --head-foot-color: #57a7f0;
+    --head-foot-color: #42c1ffc9;
     --text-color: black;
     --link-hover-color: #0000ee;
     --content-color: #42c1ff78;
@@ -242,10 +242,11 @@ li a img {
 
 .comment {
     margin-top: 9px;
+    margin-left: 67px;
 }
 
 .comment input {
-    width: 70vw;
+    width: 50vw;
     height: 19px;
     max-width: 757px;
     border-radius: 11px;
