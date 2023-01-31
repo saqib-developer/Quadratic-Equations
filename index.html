@@ -12,6 +12,7 @@
   <link rel="manifest" href="img\favicon_io\site.webmanifest">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/utils.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
@@ -26,19 +27,16 @@
       </ul>
       <div class="search">
         <input type="search" placeholder="Search Here...">
-        <button class="btn"><img src="img/icons/search.svg" alt="search"></button>
       </div>
     </nav>
   </header>
   <main>
     <div class="container">
-      <div class="img-slider-btn">
-      </div>
       <div class="slider">
         <img class="img0" src="img/logo5.png" alt="">
       </div>
       <div class="container2">
-        <div class="sidebar">
+        <!-- <div class="sidebar">
           <ul>
             <button>Facebook</button>
             <button>Twitter</button>
@@ -51,7 +49,7 @@
             <button>Get into PC</button>
             <hr>
           </ul>
-        </div>
+        </div> -->
         <div class="content">
           <h1>Quadratic Equations</h1>
           <p>
@@ -75,25 +73,25 @@
           -2x<sub>2</sub> + 23x - 24 = 0
           <br>
           <h3>Name</h3>
-          <br> The name Quadratic comes from "quad" meaning square, because the variable gets squared (like x
+          The name Quadratic comes from "quad" meaning square, because the variable gets squared (like x
           <sup>2</sup>).
           <br>
           It is also called an "Equation of Degree 2" (because of the "2" on the x)
-          <hr>
+          <!-- <hr>
 
           <h2>Quadratic Equation Solver</h2>
           <label class="vlaues" for="valueofa">Value of a :</label>
-          <input type="number" placeholder="Cofficient of x2" id="vala" />
+          <input type="number" placeholder="Cofficient of x2" id="vala" required/>
 
 
           <br>
           <label class="vlaues" for="valueofb">Value of b :</label>
-          <input type="number" placeholder="Cofficient of x" id="valb" />
+          <input type="number" placeholder="Cofficient of x" id="valb" required/>
 
 
           <br>
           <label class="vlaues" for="valueofc">Value of c :</label>
-          <input type="number" placeholder="Constant" id="valc" />
+          <input type="number" placeholder="Constant" id="valc" required/>
 
           <button onclick="solution()">Process</button>
 
@@ -116,47 +114,55 @@
               <span>)) / 2×</span>
             </div>
           </div>
-          <hr>
+          <hr> -->
           <div class="comments">
             <h5>Comments</h5>
             <hr>
-            <img src="img/profile pic.png" alt="">
             <form id="contactForm">
-              <!-- <input type="text" name="" id="name" placeholder="Your name...">
-              <input type="text" name="" id="comment" placeholder="Comment here..."><br>
-              <button class="send" type="submit" onclick="postComment()">Send</button> -->
-              <!-- <span><input type="file" id="upload-image"></span> -->
               <span class="name">
+                <img src="img/profile pic.png" alt="">
                 <label>Name:</label>
                 <input type="text" name="name" id="name" placeholder="Your Name Here..." required>
               </span>
               <span class="email">
                 <label>Email Address:</label>
                 <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
-              </span>
-              <p class="comment">
+              </span><br>
+              <span class="comment">
                 <label>Comment:</label>
                 <input type="text" name="comment" id="comment" placeholder="Your Comment here..."></input>
-              </p>
+              </span>
               <p>
                 <button type="submit" id="upload-button">Post</button>
               </p>
             </form>
           </div>
           <div class="alert">Your Comment has been posted</div>
-          <!-- This is where the comments will show up -->
           <div id="percomment">
+            <!-- This is where the comments will show up -->
           </div>
         </div>
       </div>
     </div>
     </div>
   </main>
-  <footer class="flex-all-center">
-    <p>Copyright &copy; MSN.com All Rights Reserved</p>
+
+  <footer>
+    <span>Copyright &copy; Created By Saqib</span>
+    <div>
+      <a href="https://www.fiverr.com/share/pAR6Eo" target="_blank" rel="noopener noreferrer"><img
+          src="img/icons/fiverr-logo.png" alt=""></a>
+      <a id="facebook-logo" href="https://www.facebook.com/msaqib.saqib.50364" target="_blank"
+        rel="noopener noreferrer"><img src="img/icons/facebook-logo.png" alt=""></a>
+      <a href="https://www.linkedin.com/in/muhammad-saqib-nawaz-868871257/" target="_blank"
+        rel="noopener noreferrer"><img src="img/icons/linkledn-logopng.png" alt=""></a>
+      <a href="mailto:muhammadsaqib8379@gmail.com" target="_blank" rel="noopener noreferrer"><img
+          src="img/icons/email-logo.png" alt=""></a>
+    </div>
   </footer>
   <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
   <script defer src="js/script.js"></script>
   <script type="module" src="js/firebaseComment.js"></script>
 </body>
+
 </html>

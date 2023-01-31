@@ -1,0 +1,29 @@
+@media screen and (max-width:800px) {
+    nav{
+        flex-direction: column;
+    }
+
+    .search input{
+        width: 90vw;
+        margin: 15px 0px;
+    }
+
+    .slider img{
+        animation: none;
+    }
+
+    .content{
+        margin: 15px 10px;
+    }
+
+    #contactForm{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:400px) {
+    nav ul li {
+        padding: 0px 5px;
+    }
+}
