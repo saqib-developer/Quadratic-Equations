@@ -58,8 +58,6 @@ function App() {
 
             </div>
           </div>
-        <hr />
-        <p>lakjfd;lakjf</p>
         </div>
       </main>
 
